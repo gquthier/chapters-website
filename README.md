@@ -2,6 +2,9 @@
 
 Official landing page for Chapters mobile app.
 
+🌐 **Live Site**: [chapters-website on Vercel](https://chapters-website.vercel.app)
+📦 **GitHub**: [gquthier/chapters-website](https://github.com/gquthier/chapters-website)
+
 ## 🚀 Quick Start
 
 ```bash
@@ -51,16 +54,22 @@ After deploying to Vercel:
 
 ## 📝 Pages
 
-- `/` - Homepage with hero, features, testimonials
+- `/` - Homepage with cinematic full-screen scroll (5 sections)
+  - Interactive webcam demo in iPhone mockup
+  - Testimonials, features, CTA
 - `/privacy` - Privacy Policy (required for App Store)
 - `/terms` - Terms of Service (required for App Store)
-- `/support` - FAQ and contact
+- `/support` - FAQ and contact form (Web3Forms)
 
 ## 🎨 Technologies
 
-- **Next.js 14** - React framework
+- **Next.js 14** - React framework with App Router
 - **TypeScript** - Type safety
 - **Tailwind CSS** - Styling
+- **Framer Motion** - Animations
+- **Lucide React** - Icons
+- **WebRTC** - Webcam feature
+- **Web3Forms** - Contact form (no backend needed)
 - **Vercel** - Hosting
 
 ## 📱 App Store Requirements
@@ -101,17 +110,30 @@ Add to `app/layout.tsx`:
 <Script src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID" />
 ```
 
-## 📧 Contact Emails
+## 📧 Contact Email
 
-Update these email addresses before deploying:
+All inquiries: **support@captureyourchapters.com**
 
-- `support@getchapters.app` (Support)
-- `privacy@getchapters.app` (Privacy inquiries)
-- `legal@getchapters.app` (Legal inquiries)
+This email is used for:
+- Support requests
+- Privacy inquiries
+- Legal questions
+
+## ⚙️ Configuration
+
+### Web3Forms API Key
+
+To enable the contact form, update `app/support/page.tsx` line 63:
+
+```tsx
+access_key: "YOUR_WEB3FORMS_ACCESS_KEY", // Get from web3forms.com
+```
+
+Or set as Vercel environment variable: `NEXT_PUBLIC_WEB3FORMS_KEY`
 
 ## 🐛 Issues
 
-Report issues at: [GitHub Issues](https://github.com/yourusername/chapters-website/issues)
+Report issues at: [GitHub Issues](https://github.com/gquthier/chapters-website/issues)
 
 ## 📄 License
 
