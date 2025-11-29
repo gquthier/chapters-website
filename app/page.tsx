@@ -24,7 +24,7 @@ const ChaptersLanding = () => {
 
   // Handle Scroll (Wheel)
   useEffect(() => {
-    const handleWheel = (e) => {
+    const handleWheel = (e: WheelEvent) => {
       if (isScrolling) return;
 
       if (Math.abs(e.deltaY) > 20) {
@@ -44,7 +44,7 @@ const ChaptersLanding = () => {
 
   // Handle Keyboard
   useEffect(() => {
-    const handleKeyDown = (e) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
         setActiveSection((prev) => Math.min(prev + 1, totalSections - 1));
       } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
@@ -56,11 +56,11 @@ const ChaptersLanding = () => {
   }, [totalSections]);
 
   // Handle Touch
-  const handleTouchStart = (e) => {
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
     touchStartY.current = e.touches[0].clientY;
   };
 
-  const handleTouchEnd = (e) => {
+  const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
     const touchEndY = e.changedTouches[0].clientY;
     const diff = touchStartY.current - touchEndY;
 
