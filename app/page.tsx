@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Apple, Smartphone, Lock, Mic, Activity, Play, Pause, ChevronRight, ChevronDown, Camera, X } from 'lucide-react';
+import { Smartphone, Lock, Mic, Activity, Play, Pause, ChevronRight, ChevronDown, Camera, X } from 'lucide-react';
+import AppleIcon from '@/components/AppleIcon';
 
 const ChaptersLanding = () => {
   const [activeSection, setActiveSection] = useState(0);
@@ -129,7 +130,7 @@ const ChaptersLanding = () => {
       </div>
 
       {/* Persistent UI: Top Header */}
-      <nav className="fixed top-0 left-0 w-full p-6 flex justify-between items-center z-40 mix-blend-difference">
+      <nav className="fixed top-0 left-0 w-full px-10 py-8 flex justify-between items-center z-40 mix-blend-difference">
         <div className="font-bold tracking-tighter text-xl">CHAPTERS.</div>
         <div className="text-xs font-mono opacity-50 hidden sm:block">EST. 2025 — PVT LTD</div>
       </nav>
@@ -149,11 +150,11 @@ const ChaptersLanding = () => {
       {/* Persistent UI: Viewfinder Corners (Cinematic Feel) */}
       <div className="fixed top-6 left-6 w-4 h-4 border-l border-t border-white/30 pointer-events-none z-30"></div>
       <div className="fixed top-6 right-6 w-4 h-4 border-r border-t border-white/30 pointer-events-none z-30"></div>
-      <div className="fixed bottom-6 left-6 w-4 h-4 border-l border-b border-white/30 pointer-events-none z-30"></div>
-      <div className="fixed bottom-6 right-6 w-4 h-4 border-r border-b border-white/30 pointer-events-none z-30"></div>
+      <div className="fixed bottom-8 left-6 w-4 h-4 border-l border-b border-white/30 pointer-events-none z-30"></div>
+      <div className="fixed bottom-8 right-6 w-4 h-4 border-r border-b border-white/30 pointer-events-none z-30"></div>
 
       {/* Persistent UI: Recording Indicator (Bottom Center) */}
-      <div className="fixed bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2 z-40 font-mono text-xs tracking-widest uppercase">
+      <div className="fixed bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-2 z-40 font-mono text-xs tracking-widest uppercase">
         <div className={`w-2 h-2 rounded-full ${activeSection === 0 ? 'bg-red-600 animate-pulse' : 'bg-white/20'}`}></div>
         <span className="opacity-60">{activeSection === 0 ? 'REC 00:00:00' : `SEC 0${activeSection + 1} / 05`}</span>
       </div>
@@ -178,7 +179,7 @@ const ChaptersLanding = () => {
           </p>
 
           <button className="mt-10 bg-white text-black px-8 py-4 rounded-full font-bold text-lg flex items-center gap-3 hover:scale-105 transition-transform">
-            <Apple size={24} />
+            <AppleIcon size={24} />
             Download on App Store
           </button>
 
@@ -384,7 +385,7 @@ const ChaptersLanding = () => {
 
           <div className="flex flex-col gap-4 items-center">
             <button className="bg-white text-black px-8 py-4 rounded-full font-bold text-lg flex items-center gap-3 hover:scale-105 transition-transform">
-              <Apple size={24} />
+              <AppleIcon size={24} />
               Download on App Store
             </button>
 
@@ -398,9 +399,9 @@ const ChaptersLanding = () => {
       </main>
 
       {/* Footer / Copyright - Only visible on last slide slightly */}
-      <footer className={`fixed bottom-6 w-full transition-opacity duration-500
+      <footer className={`fixed bottom-8 w-full transition-opacity duration-500
         ${activeSection === 4 ? 'opacity-100' : 'opacity-0'}`}>
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] font-mono">
             <div className="text-gray-700">
               © 2025 CHAPTERS. ALL RIGHTS RESERVED.
