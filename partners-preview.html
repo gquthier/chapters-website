@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapters Publishers Program - Preview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50 pt-20 pb-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center space-y-8 animate-fade-in-up">
+                <!-- Badge -->
+                <div class="inline-flex items-center px-4 py-2 rounded-full bg-purple-100 text-purple-700 text-sm font-medium">
+                    💰 Publishers Program
+                </div>
+
+                <!-- Headline -->
+                <h1 class="text-5xl md:text-7xl font-bold text-gray-900 tracking-tight">
+                    Chapters 
+                    <span class="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                        Publishers
+                    </span> 
+                    Program
+                </h1>
+
+                <!-- Subheadline -->
+                <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+                    Get paid reliably for content you already know how to make.
+                </p>
+
+                <!-- Key differentiator -->
+                <div class="bg-white/50 backdrop-blur-sm border border-gray-200 rounded-2xl p-6 max-w-2xl mx-auto">
+                    <p class="text-lg text-gray-700">
+                        If you're tired of brands paying late, ghosting, or <em>"we'll see how it performs"</em>… this is different.
+                    </p>
+                </div>
+
+                <!-- Sub-description -->
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    We're building a small roster of Publishers (influencers + faceless channels) for a <strong>long-term partnership</strong>.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                    <a href="#application-form" class="inline-flex items-center px-8 py-4 rounded-full bg-black text-white font-semibold text-lg hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl">
+                        Apply now
+                    </a>
+                    <a href="#application-form" class="inline-flex items-center px-8 py-4 rounded-full border-2 border-gray-300 text-gray-700 font-semibold text-lg hover:border-gray-400 transition-all">
+                        Get the brief
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decorative elements -->
+        <div class="absolute top-0 right-0 -z-10 transform translate-x-1/2 -translate-y-1/2">
+            <div class="w-96 h-96 bg-blue-200 rounded-full opacity-20 blur-3xl"></div>
+        </div>
+        <div class="absolute bottom-0 left-0 -z-10 transform -translate-x-1/2 translate-y-1/2">
+            <div class="w-96 h-96 bg-purple-200 rounded-full opacity-20 blur-3xl"></div>
+        </div>
+    </section>
+
+    <!-- Partnership Details -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <!-- Who this is for -->
+            <div class="mb-20">
+                <div class="text-center space-y-4 mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Who this is for</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">This is for creators who:</p>
+                </div>
+
+                <div class="max-w-4xl mx-auto space-y-6">
+                    <div class="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-200">
+                        <div class="text-2xl">✨</div>
+                        <p class="text-lg text-gray-700 leading-relaxed">post consistently in self-improvement, discipline, sports, mindset, creativity, personal growth and push a sense of greatness</p>
+                    </div>
+                    <div class="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-200">
+                        <div class="text-2xl">✨</div>
+                        <p class="text-lg text-gray-700 leading-relaxed">want stable income, not one-off deals</p>
+                    </div>
+                    <div class="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-200">
+                        <div class="text-2xl">✨</div>
+                        <p class="text-lg text-gray-700 leading-relaxed">can deliver simple, repeatable formats (talking head or faceless/voiceover)</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-8">
+                    <p class="text-lg text-red-600 font-medium">Not for "get rich quick" pages or fake hype.</p>
+                </div>
+            </div>
+
+            <!-- The Partnership -->
+            <div class="mb-20">
+                <div class="text-center space-y-4 mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900">The partnership</h2>
+                    <p class="text-xl text-gray-600">You have one choice:</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <!-- Option 1 - CPM -->
+                    <div class="p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-white border-2 border-blue-200 hover:shadow-xl transition-all duration-300">
+                        <div class="text-center space-y-4">
+                            <div class="text-3xl">💰</div>
+                            <h3 class="text-2xl font-bold text-gray-900">Option 1 — CPM</h3>
+                            <div class="text-4xl font-bold text-blue-600">$0.80</div>
+                            <p class="text-gray-600">per 1000 views</p>
+                        </div>
+                    </div>
+
+                    <!-- Option 2 - Contract -->
+                    <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-white border-2 border-purple-200 hover:shadow-xl transition-all duration-300">
+                        <div class="text-center space-y-4">
+                            <div class="text-3xl">📋</div>
+                            <h3 class="text-2xl font-bold text-gray-900">Option 2 — Long-term contract</h3>
+                            <div class="space-y-2">
+                                <p class="text-gray-600">3 months / 6 months / 1 year</p>
+                                <div class="text-4xl font-bold text-purple-600">up to $15k</div>
+                                <p class="text-gray-600">/month</p>
+                                <p class="text-sm text-gray-500">(depending on your subscriber count, monthly posts, and investigation)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-8">
+                    <p class="text-xl font-medium text-gray-700">That's it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Concept -->
+    <section id="content-concept" class="py-24 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="mb-20">
+                <div class="text-center space-y-4 mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900">What you'll publish</h2>
+                    <p class="text-lg text-gray-600">(simple concept)</p>
+                </div>
+
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <div class="text-center space-y-4">
+                        <p class="text-xl text-gray-700">Your audience doesn't need another <em>"motivation quote"</em>.</p>
+                        <p class="text-xl text-gray-700">They need something practical:</p>
+                    </div>
+
+                    <div class="text-center p-8 rounded-2xl bg-white border-2 border-blue-200 shadow-lg">
+                        <h3 class="text-2xl md:text-3xl font-bold text-blue-600 mb-4">"Build your life on purpose — chapter by chapter."</h3>
+                    </div>
+
+                    <div class="text-center space-y-4">
+                        <p class="text-lg text-gray-700"><strong>Sports. Art. Entrepreneurship. Study. Fitness. Any craft.</strong></p>
+                        <p class="text-lg text-gray-600">The angle is always the same:</p>
+                    </div>
+
+                    <!-- Content Steps -->
+                    <div class="flex flex-wrap justify-center items-center gap-4 py-8">
+                        <div class="flex flex-col items-center p-4 rounded-xl bg-white shadow-md">
+                            <div class="text-3xl mb-2">🎯</div>
+                            <span class="text-lg font-semibold text-gray-700">pick a goal</span>
+                        </div>
+                        <div class="mx-2 text-gray-400 text-2xl hidden sm:block">→</div>
+                        <div class="flex flex-col items-center p-4 rounded-xl bg-white shadow-md">
+                            <div class="text-3xl mb-2">💪</div>
+                            <span class="text-lg font-semibold text-gray-700">commit</span>
+                        </div>
+                        <div class="mx-2 text-gray-400 text-2xl hidden sm:block">→</div>
+                        <div class="flex flex-col items-center p-4 rounded-xl bg-white shadow-md">
+                            <div class="text-3xl mb-2">🔍</div>
+                            <span class="text-lg font-semibold text-gray-700">reflect</span>
+                        </div>
+                        <div class="mx-2 text-gray-400 text-2xl hidden sm:block">→</div>
+                        <div class="flex flex-col items-center p-4 rounded-xl bg-white shadow-md">
+                            <div class="text-3xl mb-2">📈</div>
+                            <span class="text-lg font-semibold text-gray-700">improve</span>
+                        </div>
+                        <div class="mx-2 text-gray-400 text-2xl hidden sm:block">→</div>
+                        <div class="flex flex-col items-center p-4 rounded-xl bg-white shadow-md">
+                            <div class="text-3xl mb-2">🔄</div>
+                            <span class="text-lg font-semibold text-gray-700">repeat</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why it works -->
+            <div>
+                <div class="text-center space-y-4 mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Why it works for your audience</h2>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center space-y-6 mb-12">
+                        <p class="text-xl text-gray-700">People don't fail because they're lazy.</p>
+                        <p class="text-xl font-semibold text-gray-900">They fail because they're unclear and inconsistent.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-6 mb-8">
+                        <div class="text-center p-6 rounded-2xl bg-white border border-gray-200 shadow-md">
+                            <div class="text-3xl mb-3">⚡</div>
+                            <p class="text-lg font-medium text-gray-700">stay accountable</p>
+                        </div>
+                        <div class="text-center p-6 rounded-2xl bg-white border border-gray-200 shadow-md">
+                            <div class="text-3xl mb-3">⚡</div>
+                            <p class="text-lg font-medium text-gray-700">make better decisions</p>
+                        </div>
+                        <div class="text-center p-6 rounded-2xl bg-white border border-gray-200 shadow-md">
+                            <div class="text-3xl mb-3">⚡</div>
+                            <p class="text-lg font-medium text-gray-700">build momentum over time</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <p class="text-lg text-gray-600">And it fits perfectly into short-form content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners CTA -->
+    <section id="apply" class="py-24 bg-gradient-to-br from-gray-900 to-black text-white">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center space-y-8">
+            <h2 class="text-4xl md:text-5xl font-bold">Apply</h2>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                If you want a partnership with clear terms and reliable payouts, apply.
+            </p>
+
+            <!-- Key Benefits Highlight -->
+            <div class="inline-block p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20">
+                <div class="grid md:grid-cols-3 gap-6 text-center">
+                    <div>
+                        <div class="text-2xl mb-2">💰</div>
+                        <div class="text-sm text-gray-300">Reliable Payouts</div>
+                        <div class="font-semibold">No Late Payments</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl mb-2">📋</div>
+                        <div class="text-sm text-gray-300">Clear Terms</div>
+                        <div class="font-semibold">No "We'll See"</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl mb-2">🤝</div>
+                        <div class="text-sm text-gray-300">Long-term</div>
+                        <div class="font-semibold">Stable Partnership</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What You Get Checklist -->
+            <div class="max-w-md mx-auto text-left space-y-3 pt-6">
+                <div class="flex items-center gap-3">
+                    <svg class="w-6 h-6 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span class="text-gray-200">Direct partnership with Chapters</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <svg class="w-6 h-6 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span class="text-gray-200">Monthly recurring payments</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <svg class="w-6 h-6 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span class="text-gray-200">Simple content briefs</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <svg class="w-6 h-6 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span class="text-gray-200">No audience size minimums</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <svg class="w-6 h-6 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span class="text-gray-200">Faceless content welcome</span>
+                </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+                <a href="#application-form" class="inline-flex items-center px-12 py-5 rounded-full bg-white text-black font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl">
+                    Apply now
+                </a>
+                <a href="#application-form" class="inline-flex items-center px-12 py-5 rounded-full border-2 border-white/30 text-white font-semibold text-lg hover:border-white/50 transition-all">
+                    Get the brief
+                </a>
+            </div>
+
+            <div class="space-y-2 pt-4">
+                <p class="text-sm text-gray-400">Send us your channel/profile and we'll get back to you within 48 hours.</p>
+                <p class="text-sm text-gray-500">Small roster only. Quality over quantity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section id="application-form" class="py-24 bg-gradient-to-br from-blue-50 to-white">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8">
+            <div class="text-center space-y-8 mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
+                    Ready to join our Publishers roster?
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Fill out the form below and we'll get back to you within 48 hours with next steps.
+                </p>
+            </div>
+
+            <!-- Typeform Embed Container -->
+            <div class="bg-white rounded-2xl shadow-2xl p-8 min-h-[600px]">
+                <div data-tf-live="01KCMRSD391DP3X7GTBEVKH78A"></div>
+                <script src="//embed.typeform.com/next/embed.js"></script>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="text-center mt-8 space-y-4">
+                <div class="flex items-center justify-center gap-6 text-sm text-gray-500">
+                    <span class="flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                        100% secure & confidential
+                    </span>
+                    <span class="flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Takes 3-5 minutes
+                    </span>
+                    <span class="flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        No obligations
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
