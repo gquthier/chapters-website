@@ -1,44 +1,63 @@
 "use client";
 
+import { useEffect } from 'react';
+
 export default function ApplicationForm() {
+  useEffect(() => {
+    // Load Typeform embed script
+    const script = document.createElement('script');
+    script.src = '//embed.typeform.com/next/embed.js';
+    script.async = true;
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      const existingScript = document.querySelector('script[src="//embed.typeform.com/next/embed.js"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, []);
+
   return (
-    <section id="application-form" className="py-24 bg-gradient-to-br from-blue-50 to-white">
-      <div className="max-w-4xl mx-auto px-6 lg:px-8">
-        <div className="text-center space-y-8 mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-            Ready to join our Publishers roster?
+    <section id="application-form" className="relative bg-black text-white py-32 font-sans border-t border-white/10">
+      {/* Noise Overlay */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none z-10 mix-blend-overlay"
+           style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}>
+      </div>
+
+      <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-20">
+        <div className="text-center space-y-8 mb-16">
+          <span className="text-xs font-mono text-gray-500 tracking-widest uppercase block">07 / APPLICATION</span>
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter">
+            Join our roster
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <div className="h-px w-24 bg-white/30 mx-auto"></div>
+          <p className="text-xl text-gray-400 font-light max-w-2xl mx-auto">
             Fill out the form below and we'll get back to you within 48 hours with next steps.
           </p>
         </div>
 
         {/* Typeform Embed Container */}
-        <div className="bg-white rounded-2xl shadow-2xl p-8 min-h-[600px]">
+        <div className="border border-white/10 bg-white/5 backdrop-blur-sm rounded-lg p-8 min-h-[600px] hover:bg-white/10 transition-all duration-300">
           <div data-tf-live="01KCMRSD391DP3X7GTBEVKH78A"></div>
           <script src="//embed.typeform.com/next/embed.js"></script>
         </div>
 
         {/* Additional Info */}
-        <div className="text-center mt-8 space-y-4">
-          <div className="flex items-center justify-center gap-6 text-sm text-gray-500">
-            <span className="flex items-center gap-2">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-              </svg>
-              100% secure & confidential
+        <div className="text-center mt-12">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 text-sm text-gray-400">
+            <span className="flex items-center gap-3">
+              <div className="w-2 h-2 bg-white/50 rounded-full"></div>
+              <span className="font-light">100% secure & confidential</span>
             </span>
-            <span className="flex items-center gap-2">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              Takes 3-5 minutes
+            <span className="flex items-center gap-3">
+              <div className="w-2 h-2 bg-white/50 rounded-full"></div>
+              <span className="font-light">Takes 3-5 minutes</span>
             </span>
-            <span className="flex items-center gap-2">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-              </svg>
-              No obligations
+            <span className="flex items-center gap-3">
+              <div className="w-2 h-2 bg-white/50 rounded-full"></div>
+              <span className="font-light">No obligations</span>
             </span>
           </div>
         </div>

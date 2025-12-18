@@ -1,6 +1,16 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+// Import Google Fonts
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+});
+
 export const metadata: Metadata = {
   title: "Chapters - Build a life you can rewatch",
   description: "Video journal + AI coach. Record 2-minute reflections, get personalized AI coaching, and hit your goals—one tiny win at a time.",
@@ -31,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body className={`antialiased ${poppins.variable}`}>
         {children}
       </body>
     </html>

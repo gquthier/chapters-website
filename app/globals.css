@@ -46,3 +46,22 @@ html {
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out;
 }
+
+/* News ticker animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 45s linear infinite;
+}
+
+/* Font utilities */
+.font-poppins {
+  font-family: var(--font-poppins), sans-serif;
+}
