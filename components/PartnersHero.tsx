@@ -6,14 +6,24 @@ export default function PartnersHero() {
       {/* Animated News Banner */}
       <div className="absolute top-0 left-0 w-full bg-white text-black py-2 z-50 overflow-hidden">
         <div className="flex items-center">
-          <div className="flex animate-scroll">
-            <div className="flex items-center gap-12 text-sm font-bold italic uppercase tracking-widest whitespace-nowrap font-poppins">
+          <div className="flex animate-scroll-seamless">
+            <div className="flex items-center gap-12 text-sm font-bold italic uppercase tracking-widest whitespace-nowrap font-poppins pr-12">
               <span>CHAPTERS JUST VALIDATED $500,000 FUNDING ROUND TO PUSH PEOPLE TO ACHIEVE GREATNESS</span>
               <span>•</span>
               <span>EXPANDING PUBLISHER PROGRAM GLOBALLY</span>
               <span>•</span>
               <span>JOIN OUR EXCLUSIVE ROSTER OF CONTENT CREATORS</span>
               <span>•</span>
+            </div>
+            <div className="flex items-center gap-12 text-sm font-bold italic uppercase tracking-widest whitespace-nowrap font-poppins pr-12">
+              <span>CHAPTERS JUST VALIDATED $500,000 FUNDING ROUND TO PUSH PEOPLE TO ACHIEVE GREATNESS</span>
+              <span>•</span>
+              <span>EXPANDING PUBLISHER PROGRAM GLOBALLY</span>
+              <span>•</span>
+              <span>JOIN OUR EXCLUSIVE ROSTER OF CONTENT CREATORS</span>
+              <span>•</span>
+            </div>
+            <div className="flex items-center gap-12 text-sm font-bold italic uppercase tracking-widest whitespace-nowrap font-poppins pr-12">
               <span>CHAPTERS JUST VALIDATED $500,000 FUNDING ROUND TO PUSH PEOPLE TO ACHIEVE GREATNESS</span>
               <span>•</span>
               <span>EXPANDING PUBLISHER PROGRAM GLOBALLY</span>

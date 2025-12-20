@@ -61,6 +61,22 @@ html {
   animation: scroll 45s linear infinite;
 }
 
+/* Seamless scrolling animation - starts immediately visible */
+@keyframes scroll-seamless {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-scroll-seamless {
+  animation: scroll-seamless 30s linear infinite;
+  /* Ensure immediate visibility */
+  will-change: transform;
+}
+
 /* Font utilities */
 .font-poppins {
   font-family: var(--font-poppins), sans-serif;
