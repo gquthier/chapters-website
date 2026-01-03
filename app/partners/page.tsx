@@ -9,13 +9,23 @@ const PartnersPage = () => {
   const [isScrolling, setIsScrolling] = useState(false);
   const touchStartY = useRef(0);
 
+  // Load Typeform script
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '//embed.typeform.com/next/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   const sections = [
     { id: 'hero', label: 'Intro' },
     { id: 'preview', label: 'Preview' },
     { id: 'profile', label: 'Profile' },
     { id: 'options', label: 'Options' },
     { id: 'requirements', label: 'Requirements' },
-    { id: 'impact', label: 'Impact' },
     { id: 'apply', label: 'Apply' },
     { id: 'application', label: 'Application' }
   ];
@@ -101,13 +111,45 @@ const PartnersPage = () => {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
+      {/* Funding Announcement Banner */}
+      <div className="fixed top-0 left-0 w-full bg-white text-black py-2 z-50 overflow-hidden">
+        <div className="flex items-center">
+          <div className="flex animate-scroll-seamless">
+            <div className="flex items-center gap-12 text-sm font-bold italic uppercase tracking-widest whitespace-nowrap font-poppins pr-12">
+              <span>CHAPTERS JUST VALIDATED $500,000 FUNDING ROUND TO PUSH PEOPLE TO ACHIEVE GREATNESS</span>
+              <span>•</span>
+              <span>EXPANDING PUBLISHER PROGRAM GLOBALLY</span>
+              <span>•</span>
+              <span>JOIN OUR EXCLUSIVE ROSTER OF CONTENT CREATORS</span>
+              <span>•</span>
+            </div>
+            <div className="flex items-center gap-12 text-sm font-bold italic uppercase tracking-widest whitespace-nowrap font-poppins pr-12">
+              <span>CHAPTERS JUST VALIDATED $500,000 FUNDING ROUND TO PUSH PEOPLE TO ACHIEVE GREATNESS</span>
+              <span>•</span>
+              <span>EXPANDING PUBLISHER PROGRAM GLOBALLY</span>
+              <span>•</span>
+              <span>JOIN OUR EXCLUSIVE ROSTER OF CONTENT CREATORS</span>
+              <span>•</span>
+            </div>
+            <div className="flex items-center gap-12 text-sm font-bold italic uppercase tracking-widest whitespace-nowrap font-poppins pr-12">
+              <span>CHAPTERS JUST VALIDATED $500,000 FUNDING ROUND TO PUSH PEOPLE TO ACHIEVE GREATNESS</span>
+              <span>•</span>
+              <span>EXPANDING PUBLISHER PROGRAM GLOBALLY</span>
+              <span>•</span>
+              <span>JOIN OUR EXCLUSIVE ROSTER OF CONTENT CREATORS</span>
+              <span>•</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Noise Overlay for Texture */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none z-50 mix-blend-overlay"
         style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}>
       </div>
 
       {/* Persistent UI: Top Header */}
-      <nav className="fixed top-0 left-0 w-full px-10 py-8 flex justify-between items-center z-40 mix-blend-difference">
+      <nav className="fixed top-10 left-0 w-full px-10 py-8 flex justify-between items-center z-40 mix-blend-difference">
         <div className="font-bold tracking-tighter text-xl">CHAPTERS.</div>
         <div className="text-xs font-mono opacity-50 hidden sm:block">PUBLISHERS — PVT LTD</div>
       </nav>
@@ -133,7 +175,7 @@ const PartnersPage = () => {
       {/* Persistent UI: Indicator (Bottom Center) */}
       <div className="fixed bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-2 z-40 font-mono text-xs tracking-widest uppercase">
         <div className={`w-2 h-2 rounded-full ${activeSection === 0 ? 'bg-white animate-pulse' : 'bg-white/20'}`}></div>
-        <span className="opacity-60">{`SECTION 0${activeSection + 1} / 08`}</span>
+        <span className="opacity-60">{`SECTION 0${activeSection + 1} / 07`}</span>
       </div>
 
       {/* MAIN CONTENT STACK */}
@@ -157,13 +199,13 @@ const PartnersPage = () => {
           <div className="h-px w-24 bg-white/30 my-6"></div>
 
           <p className="text-lg md:text-xl font-light text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            If you're tired of brands paying late, ghosting, or <em className="text-white">"we'll see how it performs"</em>…<br />
-            <span className="text-white font-medium">this is different.</span>
+            We're looking for creators who share content that pushes people to aspire for greatness and follow their vision.<br />
+            <span className="text-white font-medium">Help us promote personal growth and transformation.</span>
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
             <button
-              onClick={() => scrollToSection(7)} // To Application (index 7 now)
+              onClick={() => scrollToSection(6)} // To Application (index 6 now)
               className="bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform"
             >
               Apply now
@@ -360,46 +402,10 @@ const PartnersPage = () => {
           </div>
         </div>
 
-        {/* SECTION 6: IMPACT */}
-        <div className={`absolute transition-all duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] w-full max-w-6xl px-6
-            ${activeSection === 5 ? 'opacity-100 translate-y-0 blur-0' :
-            activeSection < 5 ? 'opacity-0 translate-y-20 blur-sm' : 'opacity-0 -translate-y-20 blur-sm pointer-events-none'}`}>
-
-          <div className="text-center space-y-8 mb-20">
-            <span className="text-xs font-mono text-gray-500 tracking-widest uppercase block">05 / IMPACT</span>
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter">
-              Why it works
-            </h2>
-            <div className="h-px w-24 bg-white/30 mx-auto"></div>
-            <p className="text-xl text-gray-400 font-light max-w-2xl mx-auto">
-              People don't fail because they're lazy. They fail because they're <span className="text-white font-medium">unclear</span> and <span className="text-white font-medium">inconsistent</span>.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 border border-white/10 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-300">
-              <ShieldCheck className="w-12 h-12 mx-auto mb-4 text-blue-400" />
-              <h4 className="text-lg font-bold text-white mb-2">Stay Accountable</h4>
-              <p className="text-sm text-gray-400">Public commitment forces action.</p>
-            </div>
-            <div className="text-center p-8 border border-white/10 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-300">
-              <Lightbulb className="w-12 h-12 mx-auto mb-4 text-yellow-400" />
-              <h4 className="text-lg font-bold text-white mb-2">Make Better Decisions</h4>
-              <p className="text-sm text-gray-400">Reflection creates clarity.</p>
-            </div>
-            <div className="text-center p-8 border border-white/10 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-300">
-              <TrendingUp className="w-12 h-12 mx-auto mb-4 text-green-400" />
-              <h4 className="text-lg font-bold text-white mb-2">Build Momentum</h4>
-              <p className="text-sm text-gray-400">Consistency compounds results.</p>
-            </div>
-          </div>
-        </div>
-
-
-        {/* SECTION 7: APPLY (CTA) */}
+        {/* SECTION 6: APPLY (CTA) */}
         <div className={`absolute inset-0 w-full h-full bg-black text-white flex flex-col items-center justify-center transition-all duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] px-6
-             ${activeSection === 6 ? 'opacity-100 translate-y-0 blur-0' :
-            activeSection < 6 ? 'opacity-0 translate-y-full blur-sm' : 'opacity-0 -translate-y-full blur-sm pointer-events-none'}`}>
+             ${activeSection === 5 ? 'opacity-100 translate-y-0 blur-0' :
+            activeSection < 5 ? 'opacity-0 translate-y-full blur-sm' : 'opacity-0 -translate-y-full blur-sm pointer-events-none'}`}>
 
           {/* Abstract Shapes (Dark on White) */}
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
@@ -407,7 +413,7 @@ const PartnersPage = () => {
 
 
           <div className="relative z-10 text-center max-w-4xl space-y-12">
-            <span className="text-xs font-mono font-bold tracking-[0.2em] uppercase block text-gray-400">06 / APPLY</span>
+            <span className="text-xs font-mono font-bold tracking-[0.2em] uppercase block text-gray-400">05 / APPLY</span>
 
             <h2 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.85]">
               Ready to<br className="hidden md:block" />
@@ -420,7 +426,7 @@ const PartnersPage = () => {
 
             <div className="flex flex-col sm:flex-row gap-6 items-center justify-center pt-8">
               <button
-                onClick={() => scrollToSection(7)}
+                onClick={() => scrollToSection(6)}
                 className="group relative bg-white text-black px-10 py-6 rounded-full font-bold text-xl md:text-2xl hover:scale-105 transition-all duration-300 shadow-[0_20px_50px_rgba(255,255,255,0.1)] hover:shadow-[0_30px_60px_rgba(255,255,255,0.2)] flex items-center gap-3 overflow-hidden"
               >
                 <span className="relative z-10">Apply Now</span>
@@ -430,13 +436,13 @@ const PartnersPage = () => {
           </div>
         </div>
 
-        {/* SECTION 8: APPLICATION (Form) */}
+        {/* SECTION 7: APPLICATION (Form) */}
         <div className={`absolute transition-all duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] w-full max-w-4xl px-6
-             ${activeSection === 7 ? 'opacity-100 translate-y-0 blur-0' :
-            activeSection < 7 ? 'opacity-0 translate-y-20 blur-sm' : 'opacity-0 -translate-y-20 blur-sm pointer-events-none'}`}>
+             ${activeSection === 6 ? 'opacity-100 translate-y-0 blur-0' :
+            activeSection < 6 ? 'opacity-0 translate-y-20 blur-sm' : 'opacity-0 -translate-y-20 blur-sm pointer-events-none'}`}>
 
           <div className="text-center space-y-8 mb-12">
-            <span className="text-xs font-mono text-gray-500 tracking-widest uppercase block">07 / APPLICATION</span>
+            <span className="text-xs font-mono text-gray-500 tracking-widest uppercase block">06 / APPLICATION</span>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tighter">
               Join our roster
             </h2>
@@ -452,7 +458,7 @@ const PartnersPage = () => {
 
       {/* Footer / Copyright */}
       <footer className={`fixed bottom-8 w-full transition-opacity duration-500
-        ${activeSection === 7 ? 'opacity-100' : 'opacity-0'}`}>
+        ${activeSection === 6 ? 'opacity-100' : 'opacity-0'}`}>
         <div className="max-w-6xl mx-auto px-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] font-mono">
             <div className="text-gray-700">

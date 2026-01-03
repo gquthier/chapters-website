@@ -37,7 +37,7 @@ export default function CTA() {
         {/* CTA Button */}
         <div className="pt-6">
           <a
-            href="https://apps.apple.com/app/chapters"
+            href="https://apps.apple.com/fr/app/chapters-build-yours/id6755590774"
             className="inline-flex items-center px-12 py-5 rounded-full bg-white text-black font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl"
           >
             Download on App Store

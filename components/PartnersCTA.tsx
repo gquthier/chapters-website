@@ -1,91 +1,69 @@
+import { ArrowRight } from 'lucide-react';
+
 export default function PartnersCTA() {
   return (
-    <section id="apply" className="relative bg-black text-white py-32 font-sans border-t border-white/10">
-      {/* Noise Overlay */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none z-10 mix-blend-overlay"
-           style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}>
-      </div>
+    <section id="apply" className="relative bg-white text-black py-40 font-sans overflow-hidden">
 
-      <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center space-y-12 relative z-20">
-        <div className="space-y-8">
-          <span className="text-xs font-mono text-gray-500 tracking-widest uppercase block">06 / APPLY</span>
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter">
-            Ready to start?
+      {/* Abstract Shapes */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gray-100 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gray-100 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center relative z-20">
+        <div className="space-y-12 mb-20">
+          <span className="text-xs font-mono font-bold tracking-[0.2em] uppercase block text-gray-500">07 / APPLY</span>
+
+          <h2 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.85]">
+            Ready to<br className="hidden md:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-black to-gray-600">Start?</span>
           </h2>
-          <div className="h-px w-24 bg-white/30 mx-auto"></div>
-          <p className="text-xl text-gray-400 font-light max-w-2xl mx-auto">
-            If you want a partnership with clear terms and reliable payouts, apply.
+
+          <p className="text-2xl md:text-3xl font-light max-w-3xl mx-auto leading-normal text-gray-600">
+            A partnership with <span className="text-black font-semibold">clear terms</span>, <span className="text-black font-semibold">reliable payouts</span>, and a <span className="text-black font-semibold">focused mission</span>.
           </p>
-        </div>
-
-        {/* Key Benefits Grid */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-          <div className="p-6 border border-white/10 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-300">
-            <svg className="w-8 h-8 mb-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
-            </svg>
-            <div className="text-sm text-gray-400 font-light mb-1">Reliable Payouts</div>
-            <div className="font-medium">No Late Payments</div>
-          </div>
-          <div className="p-6 border border-white/10 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-300">
-            <svg className="w-8 h-8 mb-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-            </svg>
-            <div className="text-sm text-gray-400 font-light mb-1">Clear Terms</div>
-            <div className="font-medium">No "We'll See"</div>
-          </div>
-          <div className="p-6 border border-white/10 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-300">
-            <svg className="w-8 h-8 mb-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 5C7 3.89543 7.89543 3 9 3C10.1046 3 11 3.89543 11 5C11 6.10457 10.1046 7 9 7C7.89543 7 7 6.10457 7 5Z"/>
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17C7 15.8954 7.89543 15 9 15C10.1046 15 11 15.8954 11 17C11 18.1046 10.1046 19 9 19C7.89543 19 7 18.1046 7 17Z"/>
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 11C7 9.89543 7.89543 9 9 9C10.1046 9 11 9.89543 11 11C11 12.1046 10.1046 13 9 13C7.89543 13 7 12.1046 7 11Z"/>
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 17C13 15.8954 13.8954 15 15 15C16.1046 15 17 15.8954 17 17C17 18.1046 16.1046 19 15 19C13.8954 19 13 18.1046 13 17Z"/>
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 5C13 3.89543 13.8954 3 15 3C16.1046 3 17 3.89543 17 5C17 6.10457 16.1046 7 15 7C13.8954 7 13 6.10457 13 5Z"/>
-            </svg>
-            <div className="text-sm text-gray-400 font-light mb-1">Long-Term</div>
-            <div className="font-medium">Stable Partnership</div>
-          </div>
-        </div>
-
-        {/* What You Get Checklist */}
-        <div className="max-w-md mx-auto text-left space-y-4 pt-8">
-          {[
-            "Direct Partnership With Chapters",
-            "Monthly Recurring Payments",
-            "Simple Content Briefs",
-            "No Audience Size Minimums",
-            "Faceless Content Welcome"
-          ].map((feature, index) => (
-            <div key={index} className="flex items-center gap-4">
-              <div className="w-2 h-2 bg-white rounded-full flex-shrink-0"></div>
-              <span className="text-gray-300 font-light">{feature}</span>
-            </div>
-          ))}
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-12">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6">
           <a
             href="#application-form"
-            className="bg-white text-black px-12 py-5 rounded-full font-bold text-lg hover:scale-105 transition-transform"
+            className="group relative bg-black text-white px-10 py-6 rounded-full font-bold text-xl md:text-2xl hover:scale-105 transition-all duration-300 shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:shadow-[0_30px_60px_rgba(0,0,0,0.4)] flex items-center gap-3 overflow-hidden"
           >
-            Apply now
+            <span className="relative z-10">Apply Now</span>
+            <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform relative z-10" />
+            <div className="absolute inset-0 bg-gray-900 group-hover:bg-gray-800 transition-colors"></div>
           </a>
+
           <a
             href="#application-form"
-            className="border border-white/30 text-white px-12 py-5 rounded-full font-medium text-lg hover:bg-white/10 transition-all"
+            className="px-10 py-6 rounded-full font-medium text-xl text-gray-600 hover:text-black hover:bg-gray-100 transition-all duration-300"
           >
-            Get the brief
+            Read the requirements
           </a>
         </div>
 
-        <div className="space-y-3 pt-8">
-          <p className="text-sm text-gray-400 font-light">
-            Send us your channel/profile and we'll get back to you within 48 hours.
-          </p>
-          <p className="text-sm text-gray-500 font-light">
-            Small roster only. Quality over quantity.
-          </p>
+        {/* Trust Signals */}
+        <div className="mt-24 pt-12 border-t border-gray-200">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+            {/* Placeholders for logos or stats text */}
+            <div className="flex flex-col items-center">
+              <span className="text-3xl font-bold text-black">48h</span>
+              <span className="text-xs font-mono uppercase tracking-widest mt-2">Response Time</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <span className="text-3xl font-bold text-black">Monthly</span>
+              <span className="text-xs font-mono uppercase tracking-widest mt-2">Recurring Pay</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <span className="text-3xl font-bold text-black">$15k+</span>
+              <span className="text-xs font-mono uppercase tracking-widest mt-2">Potential</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <span className="text-3xl font-bold text-black">∞</span>
+              <span className="text-xs font-mono uppercase tracking-widest mt-2">Upside</span>
+            </div>
+          </div>
+
+          <p className="text-sm text-gray-500 mt-12 font-medium">Limited spots available for Q1 2025.</p>
         </div>
       </div>
     </section>

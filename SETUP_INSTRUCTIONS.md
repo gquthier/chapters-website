@@ -117,10 +117,10 @@ Fichier : `components/CTA.tsx` (ligne 45)
 
 ```tsx
 // AVANT
-href="https://apps.apple.com/app/chapters"
+href="https://apps.apple.com/fr/app/chapters-build-yours/id6755590774"
 
 // APRÈS (quand vous aurez votre URL App Store)
-href="https://apps.apple.com/app/id1234567890"
+href="https://apps.apple.com/fr/app/chapters-build-yours/id6755590774"
 ```
 
 ### 2. Ajouter Google Analytics

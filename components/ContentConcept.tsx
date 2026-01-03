@@ -1,134 +1,152 @@
+import { ArrowRight, Lightbulb, TrendingUp, ShieldCheck } from 'lucide-react';
+
 export default function ContentConcept() {
   const contentSteps = [
-    { 
-      icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>, 
-      text: "Pick A Goal" 
+    {
+      text: "Pick A Goal",
+      sub: "Define",
+      color: "from-blue-500 to-blue-700"
     },
-    { 
-      icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>, 
-      text: "Commit" 
+    {
+      text: "Commit",
+      sub: "Action",
+      color: "from-indigo-500 to-indigo-700"
     },
-    { 
-      icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>, 
-      text: "Reflect" 
+    {
+      text: "Reflect",
+      sub: "Review",
+      color: "from-purple-500 to-purple-700"
     },
-    { 
-      icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l3-3 3 3 4-4"/></svg>, 
-      text: "Improve" 
+    {
+      text: "Improve",
+      sub: "Refine",
+      color: "from-pink-500 to-pink-700"
     },
-    { 
-      icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>, 
-      text: "Repeat" 
+    {
+      text: "Repeat",
+      sub: "Persist",
+      color: "from-red-500 to-red-700"
     }
   ];
 
   const audienceBenefits = [
-    "Stay Accountable",
-    "Make Better Decisions", 
-    "Build Momentum Over Time"
+    {
+      title: "Stay Accountable",
+      desc: "Public commitment forces action.",
+      icon: <ShieldCheck className="w-8 h-8 text-blue-400" />
+    },
+    {
+      title: "Make Better Decisions",
+      desc: "Reflection creates clarity.",
+      icon: <Lightbulb className="w-8 h-8 text-yellow-400" />
+    },
+    {
+      title: "Build Momentum",
+      desc: "Consistency compounds results.",
+      icon: <TrendingUp className="w-8 h-8 text-green-400" />
+    }
   ];
 
   return (
-    <section id="content-concept" className="relative bg-black text-white py-32 font-sans border-t border-white/10">
-      {/* Noise Overlay */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none z-10 mix-blend-overlay"
-           style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}>
-      </div>
+    <section id="content-concept" className="relative bg-black text-white py-32 font-sans border-t border-white/10 overflow-hidden">
 
-      <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-20">
-        
+      {/* Background Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-blue-900/20 via-purple-900/20 to-pink-900/20 blur-[120px] pointer-events-none"></div>
+
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-20">
+
         {/* What you'll publish */}
-        <div className="mb-32">
+        <div className="mb-40">
           <div className="text-center space-y-8 mb-20">
-            <span className="text-xs font-mono text-gray-500 tracking-widest uppercase block">04 / CONTENT</span>
+            <span className="text-xs font-mono text-gray-500 tracking-widest uppercase block">05 / CONTENT</span>
             <h2 className="text-4xl md:text-6xl font-bold tracking-tighter">
-              What you'll publish
+              The Formula
             </h2>
             <div className="h-px w-24 bg-white/30 mx-auto"></div>
-            <p className="text-lg text-gray-400 font-light">
-              (simple concept)
+            <p className="text-lg text-gray-400 font-light tracking-wide">
+              SIMPLE • REPEATABLE • VIRAL
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-12">
-            <div className="text-center space-y-6">
-              <p className="text-xl text-gray-300 font-light">
-                Your audience doesn't need another <em className="text-white">"motivation quote"</em>.
-              </p>
-              <p className="text-xl text-gray-300 font-light">
-                They need something practical:
-              </p>
-            </div>
-
-            <div className="text-center p-12 border border-white/20 bg-white/5 backdrop-blur-sm rounded-lg">
-              <h3 className="text-2xl md:text-4xl font-bold tracking-tighter mb-4">
-                "Build your life on purpose — chapter by chapter."
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-16">
+              <h3 className="text-3xl md:text-5xl font-bold tracking-tighter leading-snug">
+                "Build your life on purpose<br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">chapter by chapter."</span>
               </h3>
             </div>
 
-            <div className="text-center space-y-6">
-              <p className="text-lg text-gray-300 font-light">
-                <strong className="text-white">Sports. Art. Entrepreneurship. Study. Fitness. Any craft.</strong>
+            {/* Content Steps - Timeline Style */}
+            <div className="relative">
+              {/* Connecting Line */}
+              <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-white/20 to-transparent hidden md:block"></div>
+
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+                {contentSteps.map((step, index) => (
+                  <div key={index} className="relative group">
+                    {/* Dot in Center */}
+                    <div className={`hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-gradient-to-br ${step.color} shadow-[0_0_15px_rgba(255,255,255,0.5)] z-10 transition-transform duration-300 group-hover:scale-150`}></div>
+
+                    <div className="p-6 border border-white/10 bg-white/5 backdrop-blur-md rounded-xl hover:bg-white/10 transition-all duration-300 text-center md:h-40 md:flex md:flex-col md:justify-center md:mt-8 md:group-odd:mb-16 md:group-even:mt-16 ring-1 ring-white/5 shadow-lg">
+                      <span className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-2 block">{step.sub}</span>
+                      <span className="text-xl font-bold text-white">{step.text}</span>
+                    </div>
+                    {/* Arrow for Mobile only */}
+                    {index < contentSteps.length - 1 && (
+                      <div className="flex justify-center md:hidden py-2">
+                        <ArrowRight className="text-white/20" />
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-20 text-center space-y-4">
+              <p className="text-xl text-gray-300 font-light">
+                <strong className="text-white">Sports. Art. Entrepreneurship. Study. Fitness.</strong>
               </p>
-              <p className="text-lg text-gray-400 font-light">
-                The angle is always the same:
+              <p className="text-sm text-gray-500 font-mono">
+                THE NICHE DOESN'T MATTER. THE STORY DOES.
               </p>
             </div>
 
-            {/* Content Steps */}
-            <div className="flex flex-wrap justify-center items-center gap-6 py-12">
-              {contentSteps.map((step, index) => (
-                <div key={index} className="flex items-center">
-                  <div className="flex flex-col items-center p-6 border border-white/10 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-300">
-                    <div className="text-white mb-3">{step.icon}</div>
-                    <span className="text-lg font-medium text-gray-300">{step.text}</span>
-                  </div>
-                  {index < contentSteps.length - 1 && (
-                    <svg className="mx-4 w-6 h-6 text-gray-500 hidden sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
-                    </svg>
-                  )}
-                </div>
-              ))}
-            </div>
           </div>
         </div>
 
         {/* Why it works */}
         <div>
-          <div className="text-center space-y-8 mb-20">
-            <span className="text-xs font-mono text-gray-500 tracking-widest uppercase block">05 / IMPACT</span>
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter">
-              Why it works for your audience
-            </h2>
-            <div className="h-px w-24 bg-white/30 mx-auto"></div>
-          </div>
+          <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-16 relative overflow-hidden">
+            {/* Pattern */}
+            <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }}></div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center space-y-8 mb-16">
-              <p className="text-xl text-gray-300 font-light">
-                People don't fail because they're lazy.
-              </p>
-              <p className="text-xl font-medium text-white">
-                They fail because they're unclear and inconsistent.
-              </p>
-            </div>
+            <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+              <div className="space-y-8">
+                <span className="text-xs font-mono text-blue-400 tracking-widest uppercase block">06 / IMPACT</span>
+                <h2 className="text-4xl md:text-5xl font-bold tracking-tighter">
+                  Why it works
+                </h2>
+                <p className="text-lg text-gray-300 font-light leading-relaxed">
+                  People don't fail because they're lazy. They fail because they're <span className="text-white font-medium">unclear</span> and <span className="text-white font-medium">inconsistent</span>. This format attacks both problems head-on.
+                </p>
+                <p className="text-lg text-gray-300 font-light leading-relaxed">
+                  It's not just content. It's an accountability engine that fits perfectly into 60-second loops.
+                </p>
+              </div>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              {audienceBenefits.map((benefit, index) => (
-                <div key={index} className="text-center p-8 border border-white/10 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-300">
-                  <svg className="w-12 h-12 mx-auto mb-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                  </svg>
-                  <p className="text-lg font-medium text-gray-300">{benefit}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="text-center">
-              <p className="text-lg text-gray-400 font-light">
-                And it fits perfectly into short-form content.
-              </p>
+              <div className="grid gap-4">
+                {audienceBenefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center gap-6 p-6 bg-black/40 border border-white/10 rounded-xl hover:border-white/30 transition-colors">
+                    <div className="p-3 bg-white/5 rounded-lg">
+                      {benefit.icon}
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-white">{benefit.title}</h4>
+                      <p className="text-sm text-gray-400">{benefit.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
